@@ -299,45 +299,24 @@ function validateVideoJson(dir: string, expectedUrl: string): CheckResult[] {
   }
   const obj = parsed as Record<string, unknown>;
 
-  const videoUrl = obj["video_url"];
+  const videoUrl = obj["url"];
   if (typeof videoUrl !== "string" || videoUrl.length === 0) {
     results.push({
-      name: "video_url present",
+      name: "'url' present",
       ok: false,
-      detail: "missing or empty 'video_url' key",
+      detail: "missing or empty 'url' key (must be the video's TikTok address)",
     });
   } else if (!TIKTOK_URL_PATTERN.test(videoUrl)) {
     results.push({
-      name: "video_url is a TikTok video URL",
+      name: "'url' is a TikTok video URL",
       ok: false,
       detail: `does not match https://www.tiktok.com/@<account>/video/<id>: ${videoUrl}`,
     });
   } else {
     results.push({
-      name: "video_url is a TikTok video URL",
+      name: "'url' is a TikTok video URL",
       ok: true,
       detail: videoUrl,
-    });
-  }
-
-  const video = obj["video"];
-  if (typeof video !== "string" || video.length === 0) {
-    results.push({
-      name: "'video' key present",
-      ok: false,
-      detail: "missing or empty 'video' key (same URL as video_url)",
-    });
-  } else if (video !== videoUrl) {
-    results.push({
-      name: "'video' matches 'video_url'",
-      ok: false,
-      detail: `'video' (${video}) differs from 'video_url' (${String(videoUrl)})`,
-    });
-  } else {
-    results.push({
-      name: "'video' matches 'video_url'",
-      ok: true,
-      detail: String(video),
     });
   }
 
