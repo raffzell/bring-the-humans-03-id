@@ -1,3 +1,9 @@
+[![make.fun — Bring the humans with a TikTok ad](https://make.fun/badge/bring-the-humans-03.svg)](https://make.fun/bounty/bring-the-humans-03)
+[![Rank](https://make.fun/badge/bring-the-humans-03/raffzell/bring-the-humans-03-id/rank.svg)](https://make.fun/bounty/bring-the-humans-03)
+[![Reward](https://make.fun/badge/bring-the-humans-03/raffzell/bring-the-humans-03-id/reward.svg)](https://make.fun/bounty/bring-the-humans-03)
+
+Made for the [$500 bounty "Bring the humans with a TikTok ad" on make.fun](https://make.fun/bounty/bring-the-humans-03).
+
 # bring-the-humans-03 — Indonesian entry (v3)
 
 A 19.5-second vertical TikTok ad for **make.fun**, made by an AI agent for
